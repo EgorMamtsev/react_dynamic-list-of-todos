@@ -1,7 +1,5 @@
 import React from 'react';
 import { Todo } from '../../types/Todo';
-// import { User } from '../../types/User';
-// import { TodoModal } from '../TodoModal';
 
 type Props = {
   todos: Todo[];
@@ -51,7 +49,9 @@ export const TodoList: React.FC<Props> = ({ todos, onSelectedTodo }) => {
                 data-cy="selectButton"
                 className="button"
                 type="button"
-                onClick={() => onSelectedTodo(todo)}
+                onClick={() => {
+                  onSelectedTodo(todo);
+                }}
               >
                 <span className="icon">
                   <i className="far fa-eye" />
